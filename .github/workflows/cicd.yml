@@ -52,6 +52,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Build Development Docker image
         run: docker build -t calculatrice-api:dev .
+      - name: Log in to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Push Development Docker image
         run: |
           docker tag calculatrice-api:dev ycostarddev/calculatrice-api:dev
