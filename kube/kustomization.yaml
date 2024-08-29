@@ -1,0 +1,13 @@
+#secretGenerator:
+#- name: mysql-pass
+#  literals:
+#  - password=yohann
+#  - db=wordpressdb
+#- name: mysql-user
+#  literals:
+#  - name=root
+
+
+resources:
+  - calculatrice-api-deployment.yaml
+
